@@ -1,0 +1,30 @@
+nav {
+    font: {
+        size: 1em;
+        weight: bold;
+    }
+    float: left;
+    width: 100%; 
+    margin-top: 20px;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between; 
+        li {
+            margin: 0 5px 0 0;
+            color: $color4;
+            &:last-child {
+                margin-left: auto; 
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+                color: $color4;
+            }
+        }
+    }
+}

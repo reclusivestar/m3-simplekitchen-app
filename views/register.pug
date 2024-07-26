@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap")
+    link(rel="stylesheet" href="/css/registration.css" type="text/css")
+    script(src="script.js")
+  body
+    header
+      nav
+        ul
+          li: a(href='/') Home
+          li |
+          li: a(href='#') Blog
+          li: a(href='/register') Register
+    main
+      section#intro-text
+        span Simple Kitchen
+        p
+          | Simple & Comforting 
+          br
+          | Recipes All Year Round
+      section#form-section
+        if errors
+          ul.my-errors
+            each error in errors
+              li= error.msg
+        form(action="/register" method="POST" class="form-registration")
+          h1 Register to subscribe
+          label(for="name") Name:
+          input(
+            type="text"
+            id="name"
+            name="name"
+            value=(data && data.name) ? data.name : ''
+          )
+          label(for="email") Email:
+          input(
+            type="email"
+            id="email"
+            name="email"
+            value=(data && data.email) ? data.email : ''
+          )
+          input(
+            type="submit"
+            value="Register"
+            class="btn"
+          )
+    footer
+      | &copy; Copyright 2021

@@ -1,0 +1,48 @@
+// Variables for colors and spacing
+$border-color: #ddd;
+$header-bg-color: #000;
+$header-text-color: #fff;
+$body-bg-color: #fff;
+$body-text-color: #000;
+$hover-bg-color: #f1f1f1;
+$padding: 15px;
+$max-width: 800px;
+$margin-top: 60px;
+
+.container.listing-reg {
+  display: flex;
+  justify-content: center; 
+  margin-top: $margin-top; 
+
+  .listing-table {
+    width: 100%;
+    max-width: $max-width; 
+    border-collapse: collapse; 
+
+    th, td {
+      padding: $padding;
+      text-align: left;
+      border: 1px solid $border-color; 
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &.table-dark {
+      th {
+        background-color: $header-bg-color; 
+        color: $header-text-color; 
+      }
+
+      td {
+        background-color: $body-bg-color; 
+        color: $body-text-color; 
+      }
+
+      tr:hover {
+        background-color: $hover-bg-color; 
+      }
+    }
+  }
+}

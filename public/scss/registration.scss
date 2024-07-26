@@ -1,0 +1,115 @@
+@import "colors.scss";
+@import "nav.scss";
+@import "variables.scss";
+
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body{
+  font-family: $fontFamily1;
+  background: $backgroundColor1;
+}
+
+header {
+  height: 50px;
+  width: 1350px;
+  margin: 0.8em auto 1em auto;
+}
+
+main {
+  background: $mainColor;
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+  display: flex;
+
+    #intro-text {
+        width: 550px;
+        height: 407px;
+        float:left;
+        background: $sectionColor;
+        text-align: center;
+        padding-top: 8em;
+
+        h3 {
+        font-size: $fontSizeH3;
+        color: $color3;
+        }
+
+        span {
+        font-family: $fontFamily2;
+        font-size: 2em;
+        }
+    }
+
+  #form-section {
+    width: 50%;
+    padding: 2em;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-registration {
+      max-width: 330px;
+      margin: 0 auto;
+      flex-direction: column;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 94%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: $backgroundColor1;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $backgroundColor1;
+        }
+      }
+    }
+  }
+}
+
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: $color3;
+  font-size: 1rem;
+  text-align: center;
+
+  li {
+    margin: 0;
+
+    &:before {
+      content: "! Error : ";
+      color: #f00;
+      font-weight: bold;
+    }
+  }
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
