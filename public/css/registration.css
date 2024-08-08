@@ -85,7 +85,8 @@ main #form-section .form-registration label {
   margin-bottom: 0.5rem;
 }
 main #form-section .form-registration input[type=text],
-main #form-section .form-registration input[type=email] {
+main #form-section .form-registration input[type=email],
+main #form-section .form-registration input[type=password] {
   width: 94%;
   padding: 0.5rem;
   margin-bottom: 1rem;

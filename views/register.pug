@@ -41,6 +41,20 @@ html
             name="email"
             value=(data && data.email) ? data.email : ''
           )
+          label(for="username") Username:
+          input(
+            type="text"
+            id="username"
+            name="username"
+            value=(data && data.username) ? data.username : ''
+          )
+          label(for="password") Password:
+          input(
+            type="password"
+            id="password"
+            name="password"
+            value=(data && data.password) ? data.password : ''
+          )
           input(
             type="submit"
             value="Register"
