@@ -4,8 +4,7 @@ html
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap")
     link(rel="stylesheet" href="css/styles.css" type="text/css")
-    link(rel="manifest" href="/manifest.json")
-    script(src="/js/script.js")
+    script(src="script.js")
   body
     header
       nav
@@ -20,8 +19,17 @@ html
             li: a(href='/register') Register
             li: a(href='/login') Log In
     main
-      section#intro-text
-        span The Travel Blog
-        p This is a travel themed blog where you can view other people's posts and also add in your own travel experiences...
-      section#intro-image
-        img(src="images/travel.jpg" alt="Travel")
+      section#blog-list
+        if blogs.length > 0
+          h1 Travel Posts
+          each blog in blogs
+            article
+              h2 Title: #{blog.title}
+              p Created by: #{blog.author}
+              p Created at: #{blog.created_at.toLocaleString()}
+              p.truncated-content #{blog.content.substring(0, 100)}...
+              a(href=`/blog/${blog._id}`) Read more
+          a.button(href="/blog/new") Create a New Blog
+        else
+          h2 No Blogs Yet!
+          a.button(href="/blog/new") Create a New Blog

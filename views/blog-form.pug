@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap")
+    link(rel="stylesheet" href="/css/styles.css" type="text/css")
+    script(src="script.js")
+  body
+    header
+      nav
+        ul
+          li: a(href='/') Home
+          if session && session.user
+            li |
+            li: a(href='/blog') Blog 
+            li: a(href='/logout') Log Out
+          else
+            li |
+            li: a(href='/register') Register
+            li: a(href='/login') Log In
+    main
+      section#blog-form
+        h1= title
+        if errors
+          ul
+            each error in errors
+              li.error= error.msg
+        form(action="/blog/new" method="post")
+          div
+            label(for="title") Title:
+            input(type="text" name="title" id="title" value=(data && data.title) || '')
+          div
+            label(for="content") Content:
+            textarea(name="content" id="content")= (data && data.content) || ''
+          input(type="hidden" name="author" value=signedInUser)
+          div
+            button(type="submit") Submit
+

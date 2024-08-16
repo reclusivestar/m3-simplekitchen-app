@@ -18,6 +18,7 @@ html
             li |
             li: a(href='/register') Register
             li: a(href='/login') Log In
+          
     main
       section#intro-text
         span Welcome
@@ -27,22 +28,8 @@ html
           ul.my-errors
             each error in errors
               li= error.msg
-        form(action="/register" method="POST" class="form-registration")
-          h1 Register
-          label(for="name") Name:
-          input(
-            type="text"
-            id="name"
-            name="name"
-            value=(data && data.name) ? data.name : ''
-          )
-          label(for="email") Email:
-          input(
-            type="email"
-            id="email"
-            name="email"
-            value=(data && data.email) ? data.email : ''
-          )
+        form(action="/login" method="POST" class="form-registration")
+          h1 Login to your account
           label(for="username") Username:
           input(
             type="text"
@@ -59,7 +46,6 @@ html
           )
           input(
             type="submit"
-            value="Register"
+            value="Login"
             class="btn"
           )
-

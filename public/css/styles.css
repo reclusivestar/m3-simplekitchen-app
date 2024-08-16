@@ -34,7 +34,7 @@ html {
 
 body {
   font-family: Arial, Helvetica, Sans-Serif;
-  background: rgb(218, 170, 14);
+  background: rgb(25, 24, 75);
 }
 
 header {
@@ -74,6 +74,119 @@ main #intro-text span {
   font-size: 2em;
 }
 
+/* Blog List Styles */
+#blog-list {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#blog-list article {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#blog-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#blog-list p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#blog-list .button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#blog-list .button:hover {
+  background-color: #555;
+}
+
+/* Blog Form Styles */
+#blog-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#blog-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#blog-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#blog-form input[type=text],
+#blog-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#blog-form button, #blog-form .submit-buttton {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#blog-form button:hover, #blog-form .submit-buttton:hover {
+  background-color: #555;
+}
+
+/* Blog Detail Styles */
+#blog-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#blog-detail h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+#blog-detail p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+#blog-detail .button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#blog-detail .button:hover {
+  background-color: #555;
+}
+
 footer {
   width: 1350px;
   margin: 2em auto;
@@ -85,7 +198,7 @@ button, .submit-buttton {
   color: rgb(255, 255, 255);
   width: 100px;
   height: 40px;
-  background: rgb(218, 170, 14);
+  background: rgb(25, 24, 75);
   margin-top: 2em;
 }
 
